@@ -1,125 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shreya Portfolio</title>
+<meta charset="UTF-8">
+<title>Sriyansh Sinha Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins&display=swap" rel="stylesheet">
 
-        body {
-            background-color: #0f172a;
-            color: white;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-        header {
-            background: #1e293b;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    background: linear-gradient(135deg, #2b0a1a, #ff4da6);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
 
-        header h1 {
-            color: #38bdf8;
-        }
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-        }
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ffd1dc;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
 
-        .hero h2 {
-            font-size: 40px;
-        }
+nav a:hover::after {
+    width: 100%;
+}
 
-        .hero span {
-            color: #38bdf8;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 2s ease;
+}
 
-        .hero p {
-            margin: 20px 0;
-        }
+.hero h2 {
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+}
 
-        .btn {
-            padding: 10px 20px;
-            background: #38bdf8;
-            border: none;
-            color: black;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.hero span {
+    color: #ffd1dc;
+}
 
-        .section {
-            padding: 60px 50px;
-        }
+.hero p {
+    margin: 20px 0;
+}
 
-        .section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #38bdf8;
-        }
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff85c1, #ff4da6);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .skills, .projects {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.btn:hover {
+    transform: scale(1.1);
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            width: 200px;
-            text-align: center;
-        }
+/* SECTION */
+.section {
+    padding: 70px 50px;
+    text-align: center;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-            transition: 0.3s;
-        }
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
 
-        .contact form {
-            max-width: 400px;
-            margin: auto;
-        }
+/* CARDS */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
 
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    width: 220px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e293b;
-            margin-top: 30px;
-        }
-    </style>
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255,105,180,0.6);
+}
+
+/* CONTACT */
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Sriyansh</h1>
+    <h1>Sriyansh Sinha </h1>
     <nav>
         <a href="#">Home</a>
         <a href="#about">About</a>
@@ -130,33 +166,37 @@
 </header>
 
 <section class="hero">
-    <h2>Hi, I'm <span>Sriyansh</span> 👋</h2>
-    <p>Aspiring Developer | Creative Thinker</p>
-    <button class="btn">Hire Me</button>
+    <h2>Hi, I'm <span>Sriyansh</span> </h2>
+    <p>Aspiring Developer | Future Innovator | Creative Mind</p>
+    <button class="btn">Let's Connect</button>
 </section>
 
 <section class="section" id="about">
     <h2>About Me</h2>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-        I am a B.Tech CSE student passionate about web development,
-        creativity, and building impactful projects. I love coding,
-        designing, and exploring new ideas.
+    <p style="max-width:650px; margin:auto; line-height:1.6;">
+        I'm Sriyansh Sinha, a B.Tech Computer Science student with a strong ambition to build a successful career in tech 
+        and business. I am currently exploring web development and programming while also preparing for competitive exams 
+        like GATE.  
+
+        Beyond academics, I enjoy creative expression through content creation, fitness, and designing unique ideas. 
+        I believe in continuously improving myself and working towards long-term goals like securing opportunities in top 
+        global institutions and building impactful projects.
     </p>
 </section>
 
 <section class="section" id="skills">
-    <h2>My Skills</h2>
-    <div class="skills">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">Python</div>
-        <div class="card">C++</div>
+    <h2>Skills</h2>
+    <div class="container">
+        <div class="card">HTML 💻</div>
+        <div class="card">CSS 🎨</div>
+        <div class="card">Python 🐍</div>
+        <div class="card">C++ ⚙️</div>
     </div>
 </section>
 
 <section class="section" id="projects">
     <h2>Projects</h2>
-    <div class="projects">
+    <div class="container">
         <div class="card">Portfolio Website</div>
         <div class="card">To-Do App</div>
         <div class="card">Landing Page</div>
@@ -168,13 +208,13 @@
     <form>
         <input type="text" placeholder="Your Name">
         <input type="email" placeholder="Your Email">
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button class="btn">Send Message</button>
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button class="btn">Send</button>
     </form>
 </section>
 
 <footer>
-    <p>© 2026 Shreya | All Rights Reserved</p>
+    <p>© 2026 Sriyansh Sinha | Built with 💖</p>
 </footer>
 
 </body>
